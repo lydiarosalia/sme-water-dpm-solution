@@ -6,13 +6,14 @@ import mysql.connector
 import os
 import requests
 from datetime import datetime
+import datetime as dt
 
 ##################################
 # Define required files & folders
 ##################################
 target_directory = "C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/data/"
 file_list = os.listdir(target_directory)
-configuration = "C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/configuration.csv"
+configuration = "C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/code/sme-water-dpm-solution/import-hmw/configuration.csv"
 
 ###########################
 # Set connection to the DB
@@ -24,6 +25,19 @@ mydb = mysql.connector.connect(host='localhost', port=3306, database='dpm-soluti
 ############################
 for name in file_list:
     os.remove(target_directory + name)
+
+############################
+# Define constant variables
+############################
+# Define urls
+url1 = "https://st.hwmonline.com/hwmonline/hwmcarcgi.cgi?user=viewer01&pass=viewer01&logger="
+url2 = "&startdate="
+url3 = "+00:00&enddate="
+url4 = "+23:45&flowunits=2&pressureunits=1&flowinterval=2&interval=5&export=csv"
+
+# Define dates for required data - set up as data for last 90 days
+startdate = dt.datetime.strftime(dt.datetime.today() - dt.timedelta(days=90), '%Y-%m-%d')
+enddate = dt.datetime.strftime(dt.datetime.today(), '%Y-%m-%d')
 
 #####################################
 # Download files & load data into DB
@@ -42,7 +56,7 @@ with open(configuration) as csvfile:
         type_untrimmed = row[1]
         type = type_untrimmed.strip()
         channel = row[2]
-        url = row[3]
+        url = url1 + row[3] + url2 + startdate + url3 + enddate + url4
         file = target_directory + site_id + '.csv'
 
         # Download and write the output file
@@ -96,7 +110,7 @@ with open(configuration) as csvfile:
                 # If the type = Pressure, data is loaded into pressure table
                 # If the type is not Flow or Pressure, error message is printed out no data is inserted to any tables
                 if type == "Flow":
-                    mycursor.execute(sql, values)
+                    mycursor.execute(sql_flow, values)
                 elif type == "Pressure":
                     mycursor.execute(sql_pressure, values)
                 else:

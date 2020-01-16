@@ -1,3 +1,3 @@
-﻿SiteID,Flow/Pressure,Channel,URL
-90515,Pressure,1,https://st.hwmonline.com/hwmonline/hwmcarcgi.cgi?user=viewer01&pass=viewer01&logger=35619&startdate=2019-11-01+00:00&enddate=2019-11-30+23:45&flowunits=2&pressureunits=1&flowinterval=2&interval=5&export=csv
-03805_PRV,Flow,2,https://st.hwmonline.com/hwmonline/hwmcarcgi.cgi?user=viewer01&pass=viewer01&logger=37617&startdate=2019-11-01+00:00&enddate=2019-11-30+23:45&flowunits=2&pressureunits=1&flowinterval=2&interval=5&export=csv
+﻿SiteID,Flow/Pressure,Channel,Logger
+90515,Pressure,1,35619
+03805_PRV,Flow,2,37617
