@@ -1,34 +1,46 @@
-##########################
+############################################################################################################################################################
 # Import required modules
-##########################
+############################################################################################################################################################
 import csv
 import mysql.connector
+from mysql.connector import errorcode
 import os
 import requests
 from datetime import datetime
 import datetime as dt
 
-##################################
-# Define required files & folders
-##################################
+print(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " All Process Started!")
+
+############################################################################################################################################################
+# Define path for files & folders
+############################################################################################################################################################
 target_directory = "C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/data/"
 file_list = os.listdir(target_directory)
 configuration = "C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/code/sme-water-dpm-solution/import-hmw/configuration.csv"
 
-###########################
+############################################################################################################################################################
 # Set connection to the DB
-###########################
-mydb = mysql.connector.connect(host='localhost', port=3306, database='dpm-solution', user='root', password='root')
+############################################################################################################################################################
 
-############################
-# Delete all existing files
-############################
+try:
+    mydb = mysql.connector.connect(host='localhost', port=3306, database='dpm-solution', user='root', password='root')
+    mycursor = mydb.cursor()
+except mysql.connector.Error as errordb:
+    print("Error code:" + errordb.errno)        # error number
+    print("SQLSTATE value:" + errordb.sqlstate) # SQLSTATE value
+    print("Error message:" + errordb.msg)       # error message
+    print("Error:"+ errordb)                    # errno, sqlstate, msg values
+
+############################################################################################################################################################
+# Delete all existing files in target directory
+############################################################################################################################################################
 for name in file_list:
+
     os.remove(target_directory + name)
 
-############################
+############################################################################################################################################################
 # Define constant variables
-############################
+############################################################################################################################################################
 # Define urls
 url1 = "https://st.hwmonline.com/hwmonline/hwmcarcgi.cgi?user=viewer01&pass=viewer01&logger="
 url2 = "&startdate="
@@ -39,23 +51,23 @@ url4 = "+23:45&flowunits=2&pressureunits=1&flowinterval=2&interval=5&export=csv"
 startdate = dt.datetime.strftime(dt.datetime.today() - dt.timedelta(days=90), '%Y-%m-%d')
 enddate = dt.datetime.strftime(dt.datetime.today(), '%Y-%m-%d')
 
-#####################################
+############################################################################################################################################################
 # Download files & load data into DB
-#####################################
+############################################################################################################################################################
 with open(configuration) as csvfile:
+
     reader = csv.reader(csvfile)
     header = next(reader)
 
-    #####################################################
-    # loop to download each csv file to target_directory
-    #####################################################
+############################################################################################################################################################
+# loop to download each csv file to target_directory
+############################################################################################################################################################
     for row in reader:
 
         # Get all values into variables
         site_id = row[0]
-        type_untrimmed = row[1]
-        type = type_untrimmed.strip()
-        channel = row[2]
+        type = row[1].strip().lower()
+        channel = int(row[2])
         url = url1 + row[3] + url2 + startdate + url3 + enddate + url4
         file = target_directory + site_id + '.csv'
 
@@ -63,64 +75,64 @@ with open(configuration) as csvfile:
         get_file = requests.get(url)
         open(file, 'wb').write(get_file.content)
 
-        print(site_id + " - File Download Completed!")
+        print(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " - Site " + site_id + " - File Download Completed!")
 
-        ############################
-        # loop to load data into DB
-        ############################
+############################################################################################################################################################
+# loop to load data into DB
+############################################################################################################################################################
         with open(file) as csvfile:
+
             reader = csv.reader(csvfile)
             header = next(reader)
 
-            for row in reader:
-                mycursor = mydb.cursor()
+            try:
+                for row in reader:
 
-                # Convert datetime field from string to datetime type
-                datetime_string = row[0]
-                datetime_to_load = datetime.strptime(datetime_string, '%d-%m-%Y %H:%M')
+                    datetime_to_load = datetime.strptime(row[0], '%d-%m-%Y %H:%M')
+                    value = row[channel]
 
-                # Get value based on its channel
-                if channel == "1":
-                    value = row[1]
-                elif channel == "2":
-                    value = row[2]
-                elif channel == "3":
-                    value = row[3]
-                elif channel == "4":
-                    value = row[4]
-                elif channel == "5":
-                    value = row[5]
-                else:
-                    value = ""
+                    # If value is missing (no value), set it to None (equivalent as null)
+                    if value == '':
+                        value_to_load = None
+                    else:
+                        value_to_load = value
 
-                # If value is missing (no value), set it to 0
-                if value == '':
-                    value_to_load = 0
-                else:
-                    value_to_load = value
+                    # Define SQL to load the data into destination table based on its type (Flow or Pressure)
+                    # If the record has existed then update the record, otherwise insert the record
+                    sql_flow = "INSERT INTO flow (datetime, site_id, value) VALUES (%s, %s, %s) ON DUPLICATE KEY UPDATE datetime=%s, site_id=%s, value= %s"
+                    sql_pressure = "INSERT INTO pressure (datetime, site_id, value) VALUES (%s, %s, %s) ON DUPLICATE KEY UPDATE datetime=%s, site_id=%s, value= %s"
+                    values = (datetime_to_load, site_id, value_to_load, datetime_to_load, site_id, value_to_load)
 
-                # Define SQL to load the data into destination table based on its type (Flow or Pressure)
-                # If the record has existed then update the record, otherwise insert the record
-                sql_flow = "INSERT INTO flow (datetime, site_id, value) VALUES (%s, %s, %s) ON DUPLICATE KEY UPDATE datetime=%s, site_id=%s, value= %s"
-                sql_pressure = "INSERT INTO pressure (datetime, site_id, value) VALUES (%s, %s, %s) ON DUPLICATE KEY UPDATE datetime=%s, site_id=%s, value= %s"
-                values = (datetime_to_load, site_id, value_to_load, datetime_to_load, site_id, value_to_load)
+                    # It's case insensitive
+                    # If the type = Flow, data is loaded into flow table; If the type = Pressure, data is loaded into pressure table
+                    # If the type is not Flow or Pressure, error message is printed out no data is inserted to any tables
+                    if type == "flow":
+                        mycursor.execute(sql_flow, values)
+                    elif type == "pressure":
+                        mycursor.execute(sql_pressure, values)
+                    else:
+                        print("Invalid Type! Expected type: Flow or Pressure.")
 
-                # Execute the SQL to load the data
-                # If the type = Flow, data is loaded into flow table
-                # If the type = Pressure, data is loaded into pressure table
-                # If the type is not Flow or Pressure, error message is printed out no data is inserted to any tables
-                if type == "Flow":
-                    mycursor.execute(sql_flow, values)
-                elif type == "Pressure":
-                    mycursor.execute(sql_pressure, values)
-                else:
-                    print("Invalid Type! Expected type: Flow or Pressure.")
+                # Commit after load each file
+                # If encounter any errors, all loaded data successful files will be remained while the failed file will be rolled back
+                mydb.commit()
 
-            print(site_id + " - Data Load Completed!")
+                print(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " - Site " + site_id + " - Data Load Completed!")
 
-# Commit & close connection once ALL loading completed
-# If encounter any errors, all loaded data will be rolled back
-mydb.commit()
+            except mysql.connector.Error as error:
+                print(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " - Site " + site_id + " - Data Load Failed!")
+                print("Error: {}".format(error))
+
+                # reverting changes because of exception
+                mydb.rollback()
+                print("Process is rolled back!")
+
+        # Delete file which has successfully loaded
+        os.remove(file)
+
+############################################################################################################################################################
+# Close DB Connection, All Process Completed
+############################################################################################################################################################
 mydb.close()
 
-print("All Process Completed!")
+print(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " All Process Completed!")
