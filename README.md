@@ -1,12 +1,12 @@
 ## Table of Contents
 * [General Info](#General-Info)
 * [Technologies](#Technologies)
-* [Installation](#Installation)
+* [Setup](#Setup)
 * [Runtime arguments](#Runtime-Arguments)
 * [Running locally or on a VM](Running-Locally-or-on-a-VM)
 * [High Level Design](#High-Level-Design)
 * [Lower Level Design](#Lower-Level-Design)
-* [Error Handling] (#Error-Handling)
+* [Error Handling](#Error-Handling)
 
 ## General Info
 This project is data pipeline which part of SME Water - DPM Solution. The pipeline is broken down into the following processes:
