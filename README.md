@@ -53,7 +53,8 @@ python run_locally.py --runmode run_bau
 
 ## High Level Design
 The high level overview of how the data move within the pipeline.
-![alt text](docs/DPM Solution v1.jpg)
+
+![alt text](import-hmw/docs/DPM Solution v1.jpg)
 
 ## Lower Level Design
 The detail overview of how the data move within the pipeline, include the business logics.
