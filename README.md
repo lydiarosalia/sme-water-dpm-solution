@@ -1,4 +1,4 @@
-## Table of contents
+## Table of Contents
 * [General Info](#General-Info)
 * [Technologies](#Technologies)
 * [Setup](#Setup)
@@ -21,7 +21,7 @@ This project is data pipeline which part of SME Water - DPM Solution. The pipeli
 * Load data into local database (MySQL).
 * Push data out from local database (MySQL) into a txt file. The output files are used by Tableau for visualization purpose.
 
-how the code works??
+How the code works??
 	
 ## Technologies
 * Python: 3.7
@@ -29,16 +29,9 @@ how the code works??
 * MySQL Server
 	
 ## Setup
-To run this project locally or on a VM please follow the following steps:
+To run this locally or on a VM please follow the following steps:
 * Install Python 3.7
 * Install Git
-* Install gcloud sdk
-* Create / Use service account that has:
-   * Access to Data Catalog. Role: "Data Catalogue Tag Template User"
-   * Big Query Read and write access to the project that is deploying Obfuscation
-   * Access to bigquery.datasets.update permission for all datasets in the project 
-   * Access to deploy and run cloud functions
-   * Access to stack driver
 * Clone the project
 ```
 git clone org-1391938@github.com:sky-uk/tagging-obfuscation.git
@@ -46,34 +39,11 @@ git clone org-1391938@github.com:sky-uk/tagging-obfuscation.git
 
 * Install all the python requirements
 ```
-cd tagging-obfuscation
+cd import-hmw
 pip install -r requirements.txt
 ```
 
-* Assume a service account that has access to the Source and Target project. Code snippets below are for GCP project 'skyuk-uk-viewing-proc-dev'
-```
-gcloud iam service-accounts keys create viewing-proc-dev.json --iam-account viewing-proc-dev@skyuk-uk-viewing-proc-dev.iam.gserviceaccount.com
-gcloud auth activate-service-account --key-file=viewing-proc-dev.json
-```
-
-* Setup GOOGLE_APPLICATION_CREDENTIALS environment variable to the fully qualified key file downloaded in previous step
-```
-export GOOGLE_APPLICATION_CREDENTIALS="[PATH]" # For Linux
-set GOOGLE_APPLICATION_CREDENTIALS=[PATH] REM Windows
-```
-
-* Ways to run the function:
-  * Run the python code locally. 
-  * Deploy the Python code as cloud function
-
-## Deploying http cloud function
-* Deploy the cloud function as an http cloud function using gcloud
-
-```
-gcloud functions deploy run_obfuscation_tagging_http --region europe-west1 --runtime python37  --service-account viewing-proc-dev@skyuk-uk-viewing-proc-dev.iam.gserviceaccount.com --trigger-http
-```
-
-## Runtime arguments for script
+## Runtime Arguments
 There are 2 deployment ways:
 * Script running on VM
 * Cloud Function
