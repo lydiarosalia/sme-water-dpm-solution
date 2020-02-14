@@ -1,0 +1,15 @@
+2020-02-14 10:02:09,648 	 [INFO | run_locally.py : line 30] >> Pipeline start
+2020-02-14 10:02:09,649 	 [INFO | run_locally.py : line 38] >> The run mode is:run_bau
+2020-02-14 10:02:21,566 	 [INFO | dataimport.py : line 74] >> site=90515 | Data is downloaded
+2020-02-14 10:02:35,344 	 [INFO | dataimport.py : line 74] >> site=03805_PRV | Data is downloaded
+2020-02-14 10:02:35,456 	 [INFO | dataimport.py : line 92] >> Connect to mysql db succeed
+2020-02-14 10:02:40,208 	 [INFO | dataimport.py : line 133] >> site=90515 | Data (pressure) is loaded
+2020-02-14 10:02:44,801 	 [INFO | dataimport.py : line 133] >> site=03805_PRV | Data (flow) is loaded
+2020-02-14 10:02:44,805 	 [INFO | dataimport.py : line 152] >> Disconnect from mysql db succeed
+2020-02-14 10:02:44,866 	 [INFO | dataexport.py : line 28] >> Connect to mysql db succeed
+2020-02-14 10:02:45,141 	 [INFO | dataexport.py : line 48] >> Data (flow) is exported
+2020-02-14 10:02:45,142 	 [INFO | dataexport.py : line 56] >> Disconnect from mysql db succeed
+2020-02-14 10:02:45,169 	 [INFO | dataexport.py : line 28] >> Connect to mysql db succeed
+2020-02-14 10:02:45,466 	 [INFO | dataexport.py : line 48] >> Data (pressure) is exported
+2020-02-14 10:02:45,467 	 [INFO | dataexport.py : line 56] >> Disconnect from mysql db succeed
+2020-02-14 10:02:45,471 	 [INFO | run_locally.py : line 65] >> Pipeline end
