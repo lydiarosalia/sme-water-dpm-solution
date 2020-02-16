@@ -58,9 +58,9 @@ def main():
 
     # ----- Download data into local machine, load data into mysql, export data into text file
     ImportData.download_data(configuration_file_used, config['path']['path_configuration_failed_file'], download_start_date, download_end_date)
-    ImportData.load_data(configuration_file_used, config['path']['path_configuration_failed_file'])
-    ExportData.generate_output(config['DEFAULT']['data_type_flow'])
-    ExportData.generate_output(config['DEFAULT']['data_type_pressure'])
+    #ImportData.load_data(configuration_file_used, config['path']['path_configuration_failed_file'])
+    #ExportData.generate_output(config['DEFAULT']['data_type_flow'])
+    #ExportData.generate_output(config['DEFAULT']['data_type_pressure'])
 
     logger.info("Pipeline end")
 

@@ -67,6 +67,7 @@ class ImportData(object, metaclass=SingletonType):
                 except Exception:
                     logger.error("site={} | Unable download data. Check log".format(site_id))
                     ImportData.generate_config_failed_files(configuration_failed_file, site_id, data_type, channel_no, logger_no)
+                    os.remove(path_input_file)
                     pass
 
                 finally:
