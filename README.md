@@ -2,11 +2,9 @@
 * [General Info](#General-Info)
 * [Technologies](#Technologies)
 * [Setup](#Setup)
-* [Runtime arguments](#Runtime-Arguments)
-* [Running locally or on a VM](Running-Locally-or-on-a-VM)
-* [High Level Design](#High-Level-Design)
-* [Lower Level Design](#Lower-Level-Design)
-* [Error Handling](#Error-Handling)
+* [Executing The Pipeline](#Executing-The-Pipeline)
+* [Design](#Design)
+* [Git Info](#Git-Info)
 
 ## General Info
 This project is data pipeline which part of SME Water - DPM Solution. The pipeline is broken down into the following processes:
@@ -18,6 +16,8 @@ This project is data pipeline which part of SME Water - DPM Solution. The pipeli
 * Python: 3.7
 * MySQL Workbench 8.0 CE
 * MySQL Server
+* Tableau Public 2019.4 (Desktop)
+* Github
 	
 ## Setup
 To run this locally or on a VM please follow the following steps:
@@ -34,11 +34,12 @@ cd import-hmw
 pip install -r requirements.txt
 ```
 
-## Runtime Arguments
+## Executing The Pipeline
+### Runtime Arguments
 * run_bau : execute Business-As-Usual data pipeline, means that it will process the sites that is in utils/configuration_file.csv.
 * run_fail : execute data pipeline for particular sites(s) that are failed in the earlier execution, means that it will process the sites that is in utils/configuration_failed_file.csv.
   
-## Running Locally or on a VM
+### Running Locally or on a VM
 To run the pipeline locally:
 * Complete [Setup](#setup).
 * Execute `run_locally.py` with argument `--runmode`
@@ -51,13 +52,18 @@ Example: to run BAU data pipeline.
 python run_locally.py --runmode run_bau
 ```
 
-## High Level Design
+## Design
+### High Level Design
 The high level overview of how the data move within the pipeline.
 
 ![alt text](import-hmw/images/high-level-design-v02.jpeg)
 
-## Lower Level Design
+### Lower Level Design
 The detail overview of how the data move within the pipeline, include the business logics.
 
-## Error Handling
+### Error Handling
 ???
+
+## Git Info
+### Branching
+![alt text](import-hmw/images/git-branching-v01.jpeg)
