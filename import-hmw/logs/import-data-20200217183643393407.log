@@ -1,0 +1,9 @@
+2020-02-17 18:36:43,400 	 [INFO | run_locally.py : line 30] >> Pipeline start
+2020-02-17 18:36:43,402 	 [INFO | run_locally.py : line 34] >> No run mode provided
+2020-02-17 18:36:43,425 	 [ERROR | dataimport.py : line 68] >> site=90515 | Unable download data. Check log
+2020-02-17 18:36:43,429 	 [INFO | dataimport.py : line 37] >> site=90515 | utils/configuration_failed_files.csv is generated
+2020-02-17 18:36:43,431 	 [WARNING | dataimport.py : line 77] >> site=90515 | No data is downloaded
+2020-02-17 18:36:43,444 	 [ERROR | dataimport.py : line 68] >> site=03805_PRV | Unable download data. Check log
+2020-02-17 18:36:43,447 	 [INFO | dataimport.py : line 37] >> site=03805_PRV | utils/configuration_failed_files.csv is generated
+2020-02-17 18:36:43,450 	 [WARNING | dataimport.py : line 77] >> site=03805_PRV | No data is downloaded
+2020-02-17 18:36:43,451 	 [INFO | run_locally.py : line 65] >> Pipeline end

@@ -1,0 +1,4 @@
+2020-02-17 19:08:12,806 	 [INFO | run_locally.py : line 30] >> Pipeline start
+2020-02-17 19:08:12,808 	 [INFO | run_locally.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
+2020-02-17 19:08:12,856 	 [INFO | dataimport.py : line 93] >> Connect to mysql db succeed
+2020-02-17 19:08:18,717 	 [INFO | dataimport.py : line 134] >> site=90515 | Data (pressure) is loaded

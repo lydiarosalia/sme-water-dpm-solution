@@ -1,0 +1,7 @@
+2020-02-17 18:59:09,782 	 [INFO | run_locally.py : line 30] >> Pipeline start
+2020-02-17 18:59:09,783 	 [INFO | run_locally.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
+2020-02-17 18:59:10,032 	 [INFO | dataimport.py : line 93] >> Connect to mysql db succeed
+2020-02-17 18:59:18,076 	 [INFO | dataimport.py : line 134] >> site=90515 | Data (pressure) is loaded
+2020-02-17 18:59:25,264 	 [INFO | dataimport.py : line 134] >> site=03805_PRV | Data (flow) is loaded
+2020-02-17 18:59:25,265 	 [INFO | dataimport.py : line 153] >> Disconnect from mysql db succeed
+2020-02-17 18:59:25,266 	 [INFO | run_locally.py : line 65] >> Pipeline end
