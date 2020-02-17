@@ -67,11 +67,3 @@ The detail overview of how the data move within the pipeline, include the busine
 ## Git Info
 ### Branching
 ![alt text](import-hmw/images/git-branching-v01.jpeg)
-
-### 1. Setting Up Git
-???
-
-### 2. Authenticating with Github from Git
-???
-
-### 3. 
