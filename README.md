@@ -61,3 +61,6 @@ The detail overview of how the data move within the pipeline, include the busine
 
 ## Error Handling
 ???
+
+## Github Branching
+![alt text](import-hmw/images/github-branching-v01.jpeg)
