@@ -1,0 +1,6 @@
+2020-02-26 09:13:12,424 	 [INFO | test.py : line 30] >> Pipeline start
+2020-02-26 09:13:12,425 	 [INFO | test.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
+2020-02-26 09:13:12,470 	 [INFO | dataexport.py : line 28] >> Connect to mysql db succeed
+2020-02-26 09:13:12,471 	 [ERROR | dataexport.py : line 70] >> Unable export data (flow). Check log
+2020-02-26 09:13:12,472 	 [INFO | dataexport.py : line 75] >> Disconnect from mysql db succeed
+2020-02-26 09:13:12,473 	 [INFO | test.py : line 65] >> Pipeline end

@@ -1,5 +1,0 @@
-2020-02-17 18:57:21,998 	 [INFO | run_locally.py : line 30] >> Pipeline start
-2020-02-17 18:57:21,999 	 [INFO | run_locally.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
-2020-02-17 18:57:37,793 	 [INFO | dataimport.py : line 75] >> site=90515 | Data is downloaded
-2020-02-17 18:57:55,512 	 [INFO | dataimport.py : line 75] >> site=03805_PRV | Data is downloaded
-2020-02-17 18:57:55,513 	 [INFO | run_locally.py : line 65] >> Pipeline end

@@ -1,0 +1,7 @@
+2020-02-26 09:15:59,133 	 [INFO | test.py : line 30] >> Pipeline start
+2020-02-26 09:15:59,134 	 [INFO | test.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
+2020-02-26 09:15:59,179 	 [INFO | dataexport.py : line 28] >> Connect to mysql db succeed
+2020-02-26 09:15:59,180 	 [ERROR | dataexport.py : line 71] >> datatype=flow | 1064 - 42000 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"SELECT CONVERT(site_id USING utf8), CONVERT(all_datetime USING utf8), CONVERT(v' at line 1. Check log
+2020-02-26 09:15:59,181 	 [ERROR | dataexport.py : line 72] >> Unable export data (flow). Check log
+2020-02-26 09:15:59,181 	 [INFO | dataexport.py : line 77] >> Disconnect from mysql db succeed
+2020-02-26 09:15:59,182 	 [INFO | test.py : line 65] >> Pipeline end

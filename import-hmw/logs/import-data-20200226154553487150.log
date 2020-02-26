@@ -1,0 +1,3 @@
+2020-02-26 15:45:53,487 	 [INFO | test.py : line 27] >> Pipeline start
+2020-02-26 15:45:53,492 	 [INFO | test.py : line 35] >> Using this configuration file = configuration_files.csv
+2020-02-26 15:45:53,492 	 [ERROR | test.py : line 39] >> configuration_files.csv not found

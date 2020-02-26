@@ -1,0 +1,74 @@
+2020-02-25 21:47:11,300 	 [INFO | test.py : line 30] >> Pipeline start
+2020-02-25 21:47:11,303 	 [INFO | test.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
+2020-02-25 21:47:28,930 	 [INFO | dataimport.py : line 75] >> site=90515 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:47:46,925 	 [INFO | dataimport.py : line 75] >> site=90516 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:48:04,389 	 [INFO | dataimport.py : line 75] >> site=90517 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:48:21,974 	 [INFO | dataimport.py : line 75] >> site=90518 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:48:39,888 	 [INFO | dataimport.py : line 75] >> site=90519 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:48:58,050 	 [INFO | dataimport.py : line 75] >> site=90520 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:49:15,538 	 [INFO | dataimport.py : line 75] >> site=90521 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:49:33,252 	 [INFO | dataimport.py : line 75] >> site=90522 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:49:51,162 	 [INFO | dataimport.py : line 75] >> site=90523 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:50:11,059 	 [INFO | dataimport.py : line 75] >> site=03805_PRV channelno=1 datatype=pressure  | Data is downloaded
+2020-02-25 21:50:30,556 	 [INFO | dataimport.py : line 75] >> site=03805_PRV channelno=3 datatype=pressure  | Data is downloaded
+2020-02-25 21:50:50,326 	 [INFO | dataimport.py : line 75] >> site=03805_PRV channelno=2 datatype=flow  | Data is downloaded
+2020-02-25 21:51:10,473 	 [INFO | dataimport.py : line 75] >> site=3807 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:51:30,501 	 [INFO | dataimport.py : line 75] >> site=03808_1 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:51:50,064 	 [INFO | dataimport.py : line 75] >> site=03808_2 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:52:09,623 	 [INFO | dataimport.py : line 75] >> site=3809 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:52:29,579 	 [INFO | dataimport.py : line 75] >> site=3810 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:52:49,753 	 [INFO | dataimport.py : line 75] >> site=3811 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:53:09,186 	 [INFO | dataimport.py : line 75] >> site=3812 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:53:28,564 	 [INFO | dataimport.py : line 75] >> site=03814_1 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:53:47,927 	 [INFO | dataimport.py : line 75] >> site=03814_2 channelno=1 datatype=flow  | Data is downloaded
+2020-02-25 21:53:48,030 	 [INFO | dataimport.py : line 93] >> Connect to mysql db succeed
+2020-02-25 21:54:01,490 	 [INFO | dataimport.py : line 151] >> site=90515 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:54:01,502 	 [INFO | dataimport.py : line 37] >> site=90515 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:54:14,258 	 [INFO | dataimport.py : line 151] >> site=90516 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:54:14,263 	 [INFO | dataimport.py : line 37] >> site=90516 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:54:24,533 	 [INFO | dataimport.py : line 151] >> site=90517 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:54:24,538 	 [INFO | dataimport.py : line 37] >> site=90517 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:54:33,689 	 [INFO | dataimport.py : line 151] >> site=90518 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:54:33,697 	 [INFO | dataimport.py : line 37] >> site=90518 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:54:44,595 	 [INFO | dataimport.py : line 151] >> site=90519 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:54:44,602 	 [INFO | dataimport.py : line 37] >> site=90519 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:54:44,606 	 [INFO | dataimport.py : line 151] >> site=90520 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:54:44,613 	 [INFO | dataimport.py : line 37] >> site=90520 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:54:53,997 	 [INFO | dataimport.py : line 151] >> site=90521 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:54:54,003 	 [INFO | dataimport.py : line 37] >> site=90521 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:55:03,223 	 [INFO | dataimport.py : line 151] >> site=90522 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:55:03,233 	 [INFO | dataimport.py : line 37] >> site=90522 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:55:13,521 	 [INFO | dataimport.py : line 151] >> site=90523 channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:55:13,539 	 [INFO | dataimport.py : line 37] >> site=90523 (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:55:22,343 	 [INFO | dataimport.py : line 151] >> site=03805_PRV channelno=1 datatype=pressure | Data is loaded
+2020-02-25 21:55:22,348 	 [INFO | dataimport.py : line 37] >> site=03805_PRV (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:55:33,504 	 [INFO | dataimport.py : line 151] >> site=03805_PRV channelno=3 datatype=pressure | Data is loaded
+2020-02-25 21:55:33,508 	 [INFO | dataimport.py : line 37] >> site=03805_PRV (pressure) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:55:44,927 	 [INFO | dataimport.py : line 151] >> site=03805_PRV channelno=2 datatype=flow | Data is loaded
+2020-02-25 21:55:44,931 	 [INFO | dataimport.py : line 37] >> site=03805_PRV (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:55:54,559 	 [INFO | dataimport.py : line 151] >> site=3807 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:55:54,565 	 [INFO | dataimport.py : line 37] >> site=3807 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:01,905 	 [INFO | dataimport.py : line 151] >> site=03808_1 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:56:01,916 	 [INFO | dataimport.py : line 37] >> site=03808_1 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:09,138 	 [INFO | dataimport.py : line 151] >> site=03808_2 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:56:09,141 	 [INFO | dataimport.py : line 37] >> site=03808_2 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:17,673 	 [INFO | dataimport.py : line 151] >> site=3809 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:56:17,679 	 [INFO | dataimport.py : line 37] >> site=3809 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:22,927 	 [INFO | dataimport.py : line 151] >> site=3810 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:56:22,932 	 [INFO | dataimport.py : line 37] >> site=3810 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:29,839 	 [INFO | dataimport.py : line 151] >> site=3811 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:56:29,845 	 [INFO | dataimport.py : line 37] >> site=3811 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:38,644 	 [INFO | dataimport.py : line 151] >> site=3812 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:56:38,652 	 [INFO | dataimport.py : line 37] >> site=3812 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:46,222 	 [INFO | dataimport.py : line 151] >> site=03814_1 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:56:46,233 	 [INFO | dataimport.py : line 37] >> site=03814_1 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:53,954 	 [INFO | dataimport.py : line 151] >> site=03814_2 channelno=1 datatype=flow | Data is loaded
+2020-02-25 21:56:53,961 	 [INFO | dataimport.py : line 37] >> site=03814_2 (flow) | utils/configuration_failed_files.csv is generated
+2020-02-25 21:56:53,965 	 [INFO | dataimport.py : line 173] >> Disconnect from mysql db succeed
+2020-02-25 21:56:54,022 	 [INFO | dataexport.py : line 28] >> Connect to mysql db succeed
+2020-02-25 21:56:58,130 	 [INFO | dataexport.py : line 48] >> Data (flow) is exported
+2020-02-25 21:56:58,131 	 [INFO | dataexport.py : line 56] >> Disconnect from mysql db succeed
+2020-02-25 21:56:58,172 	 [INFO | dataexport.py : line 28] >> Connect to mysql db succeed
+2020-02-25 21:57:02,244 	 [INFO | dataexport.py : line 48] >> Data (pressure) is exported
+2020-02-25 21:57:02,247 	 [INFO | dataexport.py : line 56] >> Disconnect from mysql db succeed
+2020-02-25 21:57:02,268 	 [INFO | test.py : line 66] >> Pipeline end

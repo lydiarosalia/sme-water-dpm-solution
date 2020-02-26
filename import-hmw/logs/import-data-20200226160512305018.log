@@ -1,0 +1,15 @@
+2020-02-26 16:05:12,309 	 [INFO | run_locally.py : line 27] >> Pipeline start
+2020-02-26 16:05:12,310 	 [INFO | run_locally.py : line 35] >> Using this configuration file = utils/adhoc_config.csv
+2020-02-26 16:05:28,160 	 [INFO | dataimport.py : line 53] >> site=90515 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-26 16:05:28,258 	 [INFO | dataimport.py : line 70] >> Connect to mysql db succeed
+2020-02-26 16:05:35,346 	 [INFO | dataimport.py : line 114] >> site=90515 channelno=1 datatype=pressure | Data is loaded
+2020-02-26 16:05:35,349 	 [INFO | dataimport.py : line 131] >> Disconnect from mysql db succeed
+2020-02-26 16:05:35,382 	 [INFO | dataexport.py : line 31] >> Connect to mysql db succeed
+2020-02-26 16:05:37,416 	 [INFO | dataexport.py : line 61] >> Non-denormalized data (flow) is exported
+2020-02-26 16:12:42,641 	 [INFO | dataexport.py : line 84] >> Denormalized data (flow) is exported
+2020-02-26 16:12:42,647 	 [INFO | dataexport.py : line 97] >> Disconnect from mysql db succeed
+2020-02-26 16:12:42,717 	 [INFO | dataexport.py : line 31] >> Connect to mysql db succeed
+2020-02-26 16:12:44,661 	 [INFO | dataexport.py : line 61] >> Non-denormalized data (pressure) is exported
+2020-02-26 16:12:46,300 	 [INFO | dataexport.py : line 84] >> Denormalized data (pressure) is exported
+2020-02-26 16:12:46,301 	 [INFO | dataexport.py : line 97] >> Disconnect from mysql db succeed
+2020-02-26 16:12:46,319 	 [INFO | run_locally.py : line 53] >> Pipeline end

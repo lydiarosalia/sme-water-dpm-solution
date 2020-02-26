@@ -1,0 +1,9 @@
+2020-02-26 13:11:56,464 	 [INFO | test.py : line 30] >> Pipeline start
+2020-02-26 13:11:56,466 	 [INFO | test.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
+2020-02-26 13:11:56,568 	 [INFO | dataexport.py : line 30] >> Connect to mysql db succeed
+2020-02-26 13:11:58,506 	 [INFO | dataexport.py : line 61] >> Non-denormalized data (flow) is exported
+2020-02-26 13:11:58,507 	 [INFO | dataexport.py : line 88] >> Disconnect from mysql db succeed
+2020-02-26 13:11:58,539 	 [INFO | dataexport.py : line 30] >> Connect to mysql db succeed
+2020-02-26 13:12:01,336 	 [INFO | dataexport.py : line 61] >> Non-denormalized data (pressure) is exported
+2020-02-26 13:12:01,342 	 [INFO | dataexport.py : line 88] >> Disconnect from mysql db succeed
+2020-02-26 13:12:01,358 	 [INFO | test.py : line 65] >> Pipeline end

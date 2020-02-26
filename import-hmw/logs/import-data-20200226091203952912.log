@@ -1,0 +1,2 @@
+2020-02-26 09:12:03,958 	 [INFO | test.py : line 30] >> Pipeline start
+2020-02-26 09:12:03,964 	 [INFO | test.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
