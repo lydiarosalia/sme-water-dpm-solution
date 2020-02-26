@@ -37,7 +37,7 @@ def main():
     # ----- Validates configuration files
     if not os.path.exists(configuration_file_used):
         logger.error("{} not found".format(configuration_file_used))
-        raise MissingConfigFile("{} not found. Check log".format(configuration_file_used))
+        raise MissingConfigFile("{} not found in /utils directory. Check log".format(configuration_file_used))
 
     # ----- Define period start date & end date
     download_period_length = int(config['DEFAULT']['delta_days'])
