@@ -68,7 +68,14 @@ The high level overview of how the data move within the pipeline.
 The detail overview of how the data move within the pipeline, include the business logics.
 
 ### Error Handling
-???
+|Error Summary|Description|
+|----------|-----------|
+|Missing configuration file| Error caused by configuration file (CSV file which contain the list of sites) is not found in /utils directory. If encounter this error, then the process will be terminated, error message displayed and logged into log file.|
+|Error during file download| Any error that is encountered when downloading a file will be logged into log file, the process will still continue.|
+|Invalid logger type| Error caused by incorrect data type. Valid data types are "flow" or "pressure". If encounter this error, it will be logged into log file, the process will still continue.|
+|Database error during data load| Any DB error that is encountered when loading data will be logged into log file, the process will still continue.|
+|Database error during data export| Any DB error that is encountered when exporting data will be logged into log file, the process will still continue.|
+
 
 ## Git Info
 ### Branching
