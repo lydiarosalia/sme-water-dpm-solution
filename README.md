@@ -35,23 +35,29 @@ pip install -r requirements.txt
 ```
 
 ## Executing The Pipeline
-### Runtime Arguments
-* run_bau : execute Business-As-Usual data pipeline, means that it will process the sites that is in utils/configuration_file.csv.
-* run_fail : execute data pipeline for particular sites(s) that are failed in the earlier execution, means that it will process the sites that is in utils/configuration_failed_file.csv.
+### Runtime Argument
+Runtime argument = the name of configuration file that will be used.
+The file must be located in /utils directory.
+
+* If no argument is provided, then it will use default configuration file.
+* If argument is provided, then it will use provided configuration file.
   
 ### Running Locally or on a VM
 To run the pipeline locally:
 * Complete [Setup](#setup).
-* Execute `run_locally.py` with argument `--runmode`
+* Execute `run_locally.py` with argument `--configfile`
 Syntax:
 ```
-python run_locally.py --runmode [run_bau or run_fail]
+python run_locally.py --configfile [{filename}.csv]
 ```
-Example: to run BAU data pipeline.
+Example: to run BAU data pipeline (using default configuration file)
 ```
-python run_locally.py --runmode run_bau
+python run_locally.py
 ```
-
+Example: to run adhoc data pipeline (using adhoc configuration file named adhoc_config.csv)
+```
+python run_locally.py --configfile adhoc_config.csv
+```
 ## Design
 ### High Level Design
 The high level overview of how the data move within the pipeline.
