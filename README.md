@@ -50,9 +50,9 @@ Syntax:
 ```
 python run_locally.py --configfile [{filename}.csv] --dbname [{dbname}]
 ```
-Example: to run data pipeline using configuration file named test_config.csv and load into test_db database
+Example: to run data pipeline using configuration file named test_config.csv and load into test-db database
 ```
-python run_locally.py --configfile test_config.csv --dbname testdb
+python run_locally.py --configfile test_config.csv --dbname test-db
 ```
 ## Design
 ### High Level Design
