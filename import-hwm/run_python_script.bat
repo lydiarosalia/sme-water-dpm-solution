@@ -1,2 +1,1 @@
 "C:/ProgramData/Anaconda3/python.exe" "C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/code/sme-water-dpm-solution/import-hwm/run_locally.py" --configfile configuration_files.csv --dbname dpm-solution
-pause
