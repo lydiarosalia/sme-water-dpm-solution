@@ -64,17 +64,18 @@ The high level overview of how the data move within the pipeline.
 
 ![alt text](import-hmw/images/high-level-design-v02.jpeg)
 
-### Lower Level Design
-The detail overview of how the data move within the pipeline, include the business logics.
+### High Level Process Flow
+![alt text](import-hmw/images/high-level-process-flow-v01.jpeg)
 
 ### Error Handling
 |Error Summary|Description|
 |----------|-----------|
 |Missing configuration file| Error caused by configuration file (CSV file which contain the list of sites) is not found in /utils directory. If encounter this error, then the process will be terminated, error message displayed and logged into log file.|
+|Database is not exist| Error caused by the database is not found in local MySQL instance. If encounter this error, then the process will be terminated, error message displayed and logged into log file.|
+|Invalid data type| Error caused by incorrect data type. Valid data types are "flow" or "pressure". If encounter this error, it will be logged into log file, the process will still continue.|
 |Error during file download| Any error that is encountered when downloading a file will be logged into log file, the process will still continue.|
-|Invalid logger type| Error caused by incorrect data type. Valid data types are "flow" or "pressure". If encounter this error, it will be logged into log file, the process will still continue.|
+|Error during adding missin record process| Any error that is encountered when processing missing record will be logged into log file, the process will still continue.|
 |Database error during data load| Any DB error that is encountered when loading data will be logged into log file, the process will still continue.|
-|Database error during data export| Any DB error that is encountered when exporting data will be logged into log file, the process will still continue.|
 
 
 ## Git Info
