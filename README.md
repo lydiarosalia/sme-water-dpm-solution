@@ -8,7 +8,8 @@
 
 ## General Info
 This project is data pipeline which part of SME Water - DPM Solution. The pipeline is broken down into the following processes:
-* Pull data from HMW web server into local via HTTP request.
+* Pull data from HWM web server into local via HTTP request.
+* Re-fill missing records.
 * Load data into local database (MySQL).
 * Push data out from local database (MySQL) into a txt file. The output files are used by Tableau for visualization purpose.
 
@@ -30,7 +31,7 @@ git clone https://github.com/lydiarosalia/sme-water-dpm-solution.git
 
 * Install all the python requirements
 ```
-cd import-hmw
+cd import-hwm
 pip install -r requirements.txt
 ```
 
@@ -48,15 +49,11 @@ To run the pipeline locally:
 * Execute `run_locally.py` with argument `--configfile`
 Syntax:
 ```
-python run_locally.py --configfile [{filename}.csv]
+python run_locally.py --configfile [{filename}.csv] --dbname [{dbname}]
 ```
-Example: to run BAU data pipeline (using default configuration file)
+Example: to run data pipeline using configuration file named test_config.csv and load into test_db database
 ```
-python run_locally.py
-```
-Example: to run adhoc data pipeline (using adhoc configuration file named adhoc_config.csv)
-```
-python run_locally.py --configfile adhoc_config.csv
+python run_locally.py --configfile test_config.csv --dbname testdb
 ```
 ## Design
 ### High Level Design
