@@ -1,0 +1,7 @@
+2020-02-29 12:57:46,401 	 [INFO | run_locally.py : line 27] >> Pipeline start
+2020-02-29 12:57:46,402 	 [INFO | run_locally.py : line 35] >> Using this configuration file = utils/configuration_files.csv
+2020-02-29 12:58:00,157 	 [INFO | dataimport.py : line 53] >> site=90515 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 12:58:14,003 	 [INFO | dataimport.py : line 53] >> site=90516 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 12:58:30,713 	 [INFO | dataimport.py : line 53] >> site=90517 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 12:58:44,387 	 [INFO | dataimport.py : line 53] >> site=90518 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 12:58:58,855 	 [INFO | dataimport.py : line 53] >> site=90519 channelno=1 datatype=pressure  | Data is downloaded

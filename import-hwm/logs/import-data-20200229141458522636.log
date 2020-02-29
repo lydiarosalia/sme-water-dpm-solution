@@ -1,0 +1,24 @@
+2020-02-29 14:14:58,527 	 [INFO | run_locally.py : line 26] >> Pipeline start
+2020-02-29 14:14:58,528 	 [INFO | run_locally.py : line 34] >> Using this configuration file = utils/configuration_files.csv
+2020-02-29 14:15:12,391 	 [INFO | dataimport.py : line 52] >> site=90515 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:15:26,261 	 [INFO | dataimport.py : line 52] >> site=90516 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:15:39,953 	 [INFO | dataimport.py : line 52] >> site=90517 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:15:53,735 	 [INFO | dataimport.py : line 52] >> site=90518 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:16:07,511 	 [INFO | dataimport.py : line 52] >> site=90519 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:16:22,983 	 [INFO | dataimport.py : line 52] >> site=90520 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:16:36,740 	 [INFO | dataimport.py : line 52] >> site=90521 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:16:50,465 	 [INFO | dataimport.py : line 52] >> site=90522 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:17:04,227 	 [INFO | dataimport.py : line 52] >> site=90523 channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:17:19,930 	 [INFO | dataimport.py : line 52] >> site=03805_PRV channelno=1 datatype=pressure  | Data is downloaded
+2020-02-29 14:17:35,593 	 [INFO | dataimport.py : line 52] >> site=03805_PRV channelno=3 datatype=pressure  | Data is downloaded
+2020-02-29 14:17:51,204 	 [INFO | dataimport.py : line 52] >> site=03805_PRV channelno=2 datatype=flow  | Data is downloaded
+2020-02-29 14:18:06,979 	 [INFO | dataimport.py : line 52] >> site=3807 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:18:23,191 	 [INFO | dataimport.py : line 52] >> site=03808_1 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:18:39,315 	 [INFO | dataimport.py : line 52] >> site=03808_2 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:18:55,169 	 [INFO | dataimport.py : line 52] >> site=3809 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:19:11,738 	 [INFO | dataimport.py : line 52] >> site=3810 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:19:27,688 	 [INFO | dataimport.py : line 52] >> site=3811 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:19:43,530 	 [INFO | dataimport.py : line 52] >> site=3812 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:19:59,075 	 [INFO | dataimport.py : line 52] >> site=03814_1 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:20:14,935 	 [INFO | dataimport.py : line 52] >> site=03814_2 channelno=1 datatype=flow  | Data is downloaded
+2020-02-29 14:20:14,937 	 [INFO | run_locally.py : line 50] >> Pipeline end

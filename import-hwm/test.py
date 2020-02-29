@@ -70,13 +70,12 @@ def main():
                     ImportData.load_data(data_type, site_id, channel_no, logger_id, path_input_file)
 
                 # ----- Remove file from data/input/ once process is completed
-                if os.path.exists(path_input_file):
-                    os.remove(path_input_file)
-
-                    logger.info("logger={} site={} channelno={} datatype={} | File is removed".format(logger_id, site_id,str(channel_no), data_type))
+                # if os.path.exists(path_input_file):
+                #     os.remove(path_input_file)
+                #     logger.info("site={} channelno={} datatype={}  | File is removed".format(site_id, str(channel_no),data_type))
 
             else:
-                logger.error("logger={} site={} channelno={} datatype={} | Invalid data type, no data is imported. Check log".format(logger_id, site_id, str(channel_no), data_type))
+                logger.error("site={} channelno={} datatype={} | No data is imported because {} is not a valid logger type, expected value is flow or pressure".format(site_id, str(channel_no), data_type))
 
     logger.info("Pipeline end")
 

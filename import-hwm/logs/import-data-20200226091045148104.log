@@ -1,4 +1,0 @@
-2020-02-26 09:10:45,153 	 [INFO | test.py : line 30] >> Pipeline start
-2020-02-26 09:10:45,155 	 [INFO | test.py : line 34] >> No run mode provided. Run mode defaulted to run_bau
-2020-02-26 09:10:45,206 	 [INFO | dataexport.py : line 28] >> Connect to mysql db succeed
-2020-02-26 09:10:45,209 	 [INFO | dataexport.py : line 75] >> Disconnect from mysql db succeed
