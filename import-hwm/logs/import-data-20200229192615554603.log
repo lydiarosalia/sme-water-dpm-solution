@@ -1,0 +1,9 @@
+2020-02-29 19:26:15,557 	 [INFO | run_locally.py : line 30] >> Pipeline start
+2020-02-29 19:26:15,558 	 [INFO | run_locally.py : line 40] >> Using this configuration file = utils/adhoc_config.csv
+2020-02-29 19:26:31,510 	 [INFO | dataimport.py : line 44] >> logger=37617 site=03805_PRV channelno=1 datatype=pressure | Data is downloaded
+2020-02-29 19:26:31,841 	 [INFO | dataimport.py : line 109] >> logger=37617 site=03805_PRV channelno=1 datatype=pressure | Missing records is added
+2020-02-29 19:26:31,862 	 [INFO | dataimport.py : line 138] >> logger=37617 site=03805_PRV channelno=1 datatype=pressure | Connect to mysql db succeed
+2020-02-29 19:26:36,354 	 [INFO | dataimport.py : line 166] >> logger=37617 site=03805_PRV channelno=1 datatype=pressure | Data is loaded
+2020-02-29 19:26:36,355 	 [INFO | dataimport.py : line 181] >> logger=37617 site=03805_PRV channelno=1 datatype=pressure | Disconnect from mysql db succeed
+2020-02-29 19:26:36,356 	 [INFO | run_locally.py : line 97] >> logger=37617 site=03805_PRV channelno=1 datatype=pressure | File is removed
+2020-02-29 19:26:36,357 	 [INFO | run_locally.py : line 102] >> Pipeline end

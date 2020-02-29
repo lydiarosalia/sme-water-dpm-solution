@@ -1,9 +1,9 @@
 import csv
 import os
-import requests
 import mysql.connector
 import configparser
 import datetime as dt
+import requests
 from utils.singleton import SingletonType
 from utils.logger import MyLogger
 
@@ -116,7 +116,7 @@ class ImportData(object, metaclass=SingletonType):
             pass
 
 
-    def load_data(data_type, site_id, channel_no, logger_id, path_input_file):
+    def load_data(data_type, site_id, channel_no, logger_id, path_input_file, db_database):
         """Function to load data from local machine into local db (MySQL)
 
         :param data_type: (must be derived from the configuration) "flow" or "pressure"
@@ -132,7 +132,7 @@ class ImportData(object, metaclass=SingletonType):
 
         # ----- Open db connection
         mydb = mysql.connector.connect(host=config['dbdetails']['db_host'], port=int(config['dbdetails']['db_port']),
-                                       database=config['dbdetails']['db_database'], user=config['dbdetails']['db_user'],
+                                       database=db_database, user=config['dbdetails']['db_user'],
                                        password=config['dbdetails']['db_password'])
 
         logger.info("logger={} site={} channelno={} datatype={} | Connect to mysql db succeed".format(logger_id, site_id,str(channel_no),data_type))

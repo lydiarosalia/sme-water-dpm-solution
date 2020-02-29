@@ -1,12 +1,12 @@
 import argparse
-import os
 import csv
-import datetime as dt
+import os
+import mysql.connector
 import configparser
+import datetime as dt
 from utils.logger import MyLogger
-from utils.exceptions import MissingConfigFile
+from utils.exceptions import MissingConfigFile,DatabaseNotExist
 from dataimport import ImportData
-from addmissing import MissingAdding
 
 loggin_obj = MyLogger()
 
@@ -18,32 +18,59 @@ def main():
 
     loggin_obj.add_logger_file_handler()
     logger = loggin_obj.get_logger()
-    parser = argparse.ArgumentParser(description='Run import-hmw from VM or Local Python')
-    parser.add_argument('--configfile', help='format: [filename].csv For example file name is "abc" then argument will be "abc.csv"')
-    args = parser.parse_args()
-    adhoc_config_file = args.configfile
+
     config = configparser.ConfigParser()
     config.read('projectconfig.ini')
+
+    parser = argparse.ArgumentParser(description='Run import-hwm from VM or Local Python')
+    parser.add_argument('--configfile', help='format: [filename].csv For example file name is "abc" then argument will be "abc.csv"')
+    parser.add_argument('--dbname', help='format: [dbname] For example db name is "dpm-solution-dma1" then argument will be "dpm-solution-dma1"')
+    args = parser.parse_args()
 
     logger.info("Pipeline start")
 
     # ----- Define configuration file whether the default file or not
+    adhoc_config_file = args.configfile
+
     if adhoc_config_file is None:
         configuration_file_used = config['path']['path_utils'] + config['path']['configuration_file_name']
     else:
         configuration_file_used = config['path']['path_utils'] + adhoc_config_file
 
-    logger.info("Using this configuration file = {}".format(configuration_file_used))
-
     # ----- Validate whether the configuration file exists in utils/ directory or not
     if not os.path.exists(configuration_file_used):
         logger.error("{} not found".format(configuration_file_used))
         raise MissingConfigFile("{} not found in /utils directory. Check log".format(configuration_file_used))
+    else:
+        logger.info("Using this configuration file = {}".format(configuration_file_used))
+
+
+    # ----- Define db whether the default db or not
+    db_name = args.dbname
+
+    if db_name is None:
+        db_database = config['dbdetails']['default_db_name']
+    else:
+        db_database = db_name
+
+    # ----- Validate whether the the db exists or not
+    try:
+        conn = mysql.connector.connect(host=config['dbdetails']['db_host'], port=int(config['dbdetails']['db_port']),
+                                       database=db_database, user=config['dbdetails']['db_user'],
+                                       password=config['dbdetails']['db_password'])
+
+        logger.info("Using this database = {}".format(db_database))
+
+    except mysql.connector.Error:
+        logger.error("Database {} not found".format(db_database))
+        raise DatabaseNotExist("{} not found. Check log".format(db_database))
+
 
     # ----- Set the download period (start date & end date)
     download_period_length = int(config['dataimportdetails']['delta_days'])
     download_start_date = dt.datetime.strftime(dt.datetime.today() - dt.timedelta(days=download_period_length), '%Y-%m-%d')
     download_end_date = dt.datetime.strftime(dt.datetime.today(), '%Y-%m-%d')
+
 
     # ----- Based on configuration file, (loop) start download and load data from HWM web-server into local MySQL
     with open(configuration_file_used) as csvfile_config:
@@ -67,7 +94,7 @@ def main():
                     ImportData.add_missing_records(data_type, site_id, channel_no, logger_id, path_input_file)
 
                 if os.path.exists(path_input_file):
-                    ImportData.load_data(data_type, site_id, channel_no, logger_id, path_input_file)
+                    ImportData.load_data(data_type, site_id, channel_no, logger_id, path_input_file, db_database)
 
                 # ----- Remove file from data/input/ once process is completed
                 if os.path.exists(path_input_file):
