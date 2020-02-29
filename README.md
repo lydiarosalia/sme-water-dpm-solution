@@ -62,10 +62,10 @@ python run_locally.py --configfile adhoc_config.csv
 ### High Level Design
 The high level overview of how the data move within the pipeline.
 
-![alt text](import-hmw/images/high-level-design-v02.jpeg)
+![alt text](import-hwm/images/high-level-design-v02.jpeg)
 
 ### High Level Process Flow
-![alt text](import-hmw/images/high-level-process-flow-v01.jpeg)
+![alt text](import-hwm/images/high-level-process-flow-v01.jpeg)
 
 ### Error Handling
 |Error Summary|Description|
@@ -80,4 +80,4 @@ The high level overview of how the data move within the pipeline.
 
 ## Git Info
 ### Branching
-![alt text](import-hmw/images/git-branching-v01.jpeg)
+![alt text](import-hwm/images/git-branching-v01.jpeg)
