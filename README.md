@@ -48,12 +48,25 @@ To run the pipeline locally:
 
 Syntax:
 ```
-python run_locally.py --configfile [{filename}.csv] --dbname [{dbname}]
+python run_locally.py --configfile {filename} --dbname {dbname}
 ```
 Example: to run data pipeline using configuration file named test_config.csv and load into test-db database
 ```
 python run_locally.py --configfile test_config.csv --dbname test-db
 ```
+
+### Syntax fot .bat file
+The .bat file will contain the following syntax.
+
+Syntax:
+```
+"{path of your python.exe}" "{path of run_locally.py}" --configfile {configuration file name} --dbname {database name}
+```
+Example: to run data pipeline using configuration file named test_config.csv and load into test-db database
+```
+"C:/ProgramData/Anaconda3/python.exe" "C:/sme-water-dpm-solution/import-hwm/run_locally.py" --configfile test_config.csv --dbname test-db
+```
+
 ## Design
 ### High Level Design
 The high level overview of how the data move within the pipeline.
