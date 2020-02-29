@@ -55,7 +55,7 @@ Example: to run data pipeline using configuration file named test_config.csv and
 python run_locally.py --configfile test_config.csv --dbname test-db
 ```
 
-### Syntax fot .bat file
+### Syntax for The .bat File
 The .bat file will contain the following syntax.
 
 Syntax:
