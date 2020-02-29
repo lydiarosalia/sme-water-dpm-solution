@@ -62,7 +62,7 @@ python run_locally.py --configfile adhoc_config.csv
 ### High Level Design
 The high level overview of how the data move within the pipeline.
 
-![alt text](import-hwm/images/high-level-design-v02.jpeg)
+![alt text](import-hwm/images/high-level-design-v03.jpeg)
 
 ### High Level Process Flow
 ![alt text](import-hwm/images/high-level-process-flow-v01.jpeg)
