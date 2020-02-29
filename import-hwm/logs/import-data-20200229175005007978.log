@@ -1,4 +1,0 @@
-2020-02-29 17:50:05,010 	 [INFO | test.py : line 28] >> Pipeline start
-2020-02-29 17:50:05,011 	 [INFO | test.py : line 36] >> Using this configuration file = utils/adhoc_config.csv
-2020-02-29 17:50:21,048 	 [INFO | dataimport.py : line 37] >> site=03805_PRV channelno=1 datatype=pressure  | Data is downloaded
-2020-02-29 17:50:21,402 	 [INFO | test.py : line 71] >> Pipeline end

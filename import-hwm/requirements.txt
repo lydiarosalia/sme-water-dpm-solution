@@ -1,0 +1,9 @@
+configparser
+argparse
+csv
+os
+mysql.connector
+datetime
+
+
+

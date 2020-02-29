@@ -1,3 +1,0 @@
-2020-02-29 16:54:40,840 	 [INFO | test.py : line 28] >> Pipeline start
-2020-02-29 16:54:40,841 	 [INFO | test.py : line 36] >> Using this configuration file = utils/adhoc_config.csv
-2020-02-29 16:54:40,850 	 [INFO | test.py : line 63] >> Pipeline end

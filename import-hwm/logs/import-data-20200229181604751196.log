@@ -1,5 +1,0 @@
-2020-02-29 18:16:04,754 	 [INFO | test.py : line 28] >> Pipeline start
-2020-02-29 18:16:04,755 	 [INFO | test.py : line 36] >> Using this configuration file = utils/adhoc_config.csv
-2020-02-29 18:16:20,552 	 [INFO | dataimport.py : line 43] >> logger=37617 site=03805_PRV channelno=1 datatype=pressure  | Data is downloaded
-2020-02-29 18:16:20,887 	 [INFO | dataimport.py : line 104] >> logger=37617 site=03805_PRV channelno=1 datatype=pressure  | Missing records is added
-2020-02-29 18:16:20,889 	 [INFO | test.py : line 75] >> Pipeline end
