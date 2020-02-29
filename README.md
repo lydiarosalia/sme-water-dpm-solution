@@ -36,15 +36,16 @@ pip install -r requirements.txt
 ```
 
 ## Executing The Pipeline
-### Runtime Argument
-Runtime argument = the name of configuration file that will be used and database name
+### Runtime Arguments
+Runtime arguments: the name of configuration file that will be used and database name
 * Configuration file - If no argument is provided, then it will use default configuration file (see projectconfig.ini). If argument is provided, then it will use provided configuration file.
 * Database Name - If no argument is provided, then it will load into default database (see projectconfig.ini). If argument is provided, then it will load into that database.
   
 ### Running Locally or on a VM
 To run the pipeline locally:
 * Complete [Setup](#setup).
-* Execute `run_locally.py` with argument `--configfile` and  `--dbname`
+* Execute `run_locally.py` with argument `--configfile` and  `--dbname`.
+
 Syntax:
 ```
 python run_locally.py --configfile [{filename}.csv] --dbname [{dbname}]
