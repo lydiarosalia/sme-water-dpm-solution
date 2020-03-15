@@ -1,0 +1,16 @@
+2020-03-06 13:34:04,201 	 [INFO | run_locally.py : line 32] >> Pipeline start
+2020-03-06 13:34:04,203 	 [INFO | run_locally.py : line 48] >> Using this configuration file = C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/code/master/sme-water-dpm-solution/import-hwm/utils/configuration_files.csv
+2020-03-06 13:34:04,280 	 [INFO | run_locally.py : line 65] >> Using this database = dpm-solution
+2020-03-06 13:34:16,908 	 [INFO | dataimport.py : line 46] >> logger=35619 site=90515 channelno=1 datatype=pressure | Data is downloaded
+2020-03-06 13:34:19,437 	 [INFO | dataimport.py : line 113] >> logger=35619 site=90515 channelno=1 datatype=pressure | Missing records is added
+2020-03-06 13:34:19,469 	 [INFO | dataimport.py : line 144] >> logger=35619 site=90515 channelno=1 datatype=pressure | Connect to mysql db succeed
+2020-03-06 13:34:25,840 	 [INFO | dataimport.py : line 172] >> logger=35619 site=90515 channelno=1 datatype=pressure | Data is loaded
+2020-03-06 13:34:25,844 	 [INFO | dataimport.py : line 187] >> logger=35619 site=90515 channelno=1 datatype=pressure | Disconnect from mysql db succeed
+2020-03-06 13:34:25,845 	 [INFO | run_locally.py : line 106] >> logger=35619 site=90515 channelno=1 datatype=pressure | File is removed
+2020-03-06 13:34:40,185 	 [INFO | dataimport.py : line 46] >> logger=37617 site=03805_PRV channelno=2 datatype=flow | Data is downloaded
+2020-03-06 13:34:40,527 	 [INFO | dataimport.py : line 113] >> logger=37617 site=03805_PRV channelno=2 datatype=flow | Missing records is added
+2020-03-06 13:34:40,548 	 [INFO | dataimport.py : line 144] >> logger=37617 site=03805_PRV channelno=2 datatype=flow | Connect to mysql db succeed
+2020-03-06 13:34:45,889 	 [INFO | dataimport.py : line 172] >> logger=37617 site=03805_PRV channelno=2 datatype=flow | Data is loaded
+2020-03-06 13:34:45,890 	 [INFO | dataimport.py : line 187] >> logger=37617 site=03805_PRV channelno=2 datatype=flow | Disconnect from mysql db succeed
+2020-03-06 13:34:45,892 	 [INFO | run_locally.py : line 106] >> logger=37617 site=03805_PRV channelno=2 datatype=flow | File is removed
+2020-03-06 13:34:45,893 	 [INFO | run_locally.py : line 111] >> Pipeline end

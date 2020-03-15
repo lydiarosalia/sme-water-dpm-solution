@@ -27,7 +27,8 @@ class MyLogger(object, metaclass=SingletonType):
         :return: None
         """
         now = datetime.datetime.now()
-        fileHandler = logging.FileHandler("logs/" + "import-data-"+ now.strftime("%Y%m%d%H%M%S%f")+".log")
+        #fileHandler = logging.FileHandler("logs/" + "import-data-"+ now.strftime("%Y%m%d%H%M%S%f")+".log")
+        fileHandler = logging.FileHandler("C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/code/master/sme-water-dpm-solution/import-hwm/logs/" + now.strftime("%Y%m%d%H%M%S%f") + ".log")
         fileHandler.setFormatter(self.formatter)
         self._logger.addHandler(fileHandler)
 

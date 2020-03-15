@@ -32,7 +32,9 @@ class ImportData(object, metaclass=SingletonType):
         :return: None"""
 
         config = configparser.ConfigParser()
-        config.read('projectconfig.ini')
+        confpath = '/'.join((os.path.abspath(__file__).replace('\\', '/')).split('/')[:-1])
+        config.read(os.path.join(confpath, 'projectconfig.ini'))
+        # config.read('projectconfig.ini')
 
         url = config['dataimportdetails']['url1']  + str(logger_id) + config['dataimportdetails']['url2']  + download_start_date + config['dataimportdetails']['url3']  + download_end_date + config['dataimportdetails']['url4']
 
@@ -64,7 +66,9 @@ class ImportData(object, metaclass=SingletonType):
         :return: None"""
 
         config = configparser.ConfigParser()
-        config.read('projectconfig.ini')
+        confpath = '/'.join((os.path.abspath(__file__).replace('\\', '/')).split('/')[:-1])
+        config.read(os.path.join(confpath, 'projectconfig.ini'))
+        # config.read('projectconfig.ini')
 
         try:
             # ----- Add missing rows
@@ -128,7 +132,9 @@ class ImportData(object, metaclass=SingletonType):
         :return: None"""
 
         config = configparser.ConfigParser()
-        config.read('projectconfig.ini')
+        confpath = '/'.join((os.path.abspath(__file__).replace('\\', '/')).split('/')[:-1])
+        config.read(os.path.join(confpath, 'projectconfig.ini'))
+        # config.read('projectconfig.ini')
 
         # ----- Open db connection
         mydb = mysql.connector.connect(host=config['dbdetails']['db_host'], port=int(config['dbdetails']['db_port']),

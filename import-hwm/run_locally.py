@@ -20,7 +20,9 @@ def main():
     logger = loggin_obj.get_logger()
 
     config = configparser.ConfigParser()
-    config.read('projectconfig.ini')
+    confpath = '/'.join((os.path.abspath(__file__).replace('\\', '/')).split('/')[:-1])
+    config.read(os.path.join(confpath, 'projectconfig.ini'))
+    #config.read('projectconfig.ini')
 
     parser = argparse.ArgumentParser(description='Run import-hwm from VM or Local Python')
     parser.add_argument('--configfile', help='format: [filename].csv For example file name is "abc" then argument will be "abc.csv"')

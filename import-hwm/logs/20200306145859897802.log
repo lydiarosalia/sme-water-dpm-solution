@@ -1,0 +1,3 @@
+2020-03-06 14:58:59,906 	 [INFO | run_locally.py : line 32] >> Pipeline start
+2020-03-06 14:58:59,914 	 [INFO | run_locally.py : line 47] >> Using this configuration file = C:/Users/LRS07/OneDrive - Sky/Documents/Others/SME Water Project/code/master/sme-water-dpm-solution/import-hwm/utils/configuration_files.csv
+2020-03-06 14:59:00,138 	 [INFO | run_locally.py : line 64] >> Using this database = dpm-solution
