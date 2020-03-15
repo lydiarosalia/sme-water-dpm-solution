@@ -35,6 +35,9 @@ cd import-hwm
 pip install -r requirements.txt
 ```
 
+* In projectconfig.ini, modify path_utils, path_input.
+* In logger.py, modify path for "filehandler" (line 32).
+
 ## Executing The Pipeline
 ### Runtime Arguments
 Runtime arguments: the name of configuration file that will be used and database name
